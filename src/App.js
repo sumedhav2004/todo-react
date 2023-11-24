@@ -1,4 +1,4 @@
-import React, { Component } from "react"; 
+import React, { Component , useState} from "react"; 
 import "bootstrap/dist/css/bootstrap.css"; 
 import Container from "react-bootstrap/Container"; 
 import Row from "react-bootstrap/Row"; 
@@ -7,7 +7,9 @@ import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup"; 
 import FormControl from "react-bootstrap/FormControl"; 
 import ListGroup from "react-bootstrap/ListGroup"; 
-  
+import './App.css';
+import DarkModeToggle from "./components/DarkToggle";
+
 class App extends Component { 
     constructor(props) { 
         super(props); 
@@ -16,6 +18,7 @@ class App extends Component {
         this.state = { 
             userInput: "", 
             list: [], 
+            isdarkMode:false,
         }; 
     } 
   
@@ -76,7 +79,9 @@ class App extends Component {
   
     render() { 
         return ( 
-            <Container> 
+          <Container className={`app ${this.state.isDarkMode ? 'dark-mode' : 'light-mode'}`}>
+
+                <DarkModeToggle isDarkMode={this.state.isDarkMode} /> 
                 <Row 
                     style={{ 
                         display: "flex", 

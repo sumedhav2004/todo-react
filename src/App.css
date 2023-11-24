@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+body {
+  transition: background-color 0.3s ease;
+}
+
+.light-mode {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+.dark-mode {
+  --background-color: #222222;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Add more specific styles as needed */

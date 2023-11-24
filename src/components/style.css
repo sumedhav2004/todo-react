@@ -1,0 +1,27 @@
+/* styles.css */
+
+.dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dark-mode-icon {
+    font-size: 1.5rem;
+    margin-right: 8px;
+  }
+  
+  .dark-mode-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff; /* Text color for the button */
+  }
+  
+  /* Optional: Add a transition effect for smoother color changes */
+  .dark-mode-toggle:hover .dark-mode-text {
+    transition: color 0.3s ease;
+    color: #a0a0a0; /* Adjust the color on hover if needed */
+  }
